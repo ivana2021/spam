@@ -51,6 +51,6 @@ if st.button("Deteksi"):
         pred = model.predict(input_vec)[0]
         proba = model.predict_proba(input_vec)[0]
 
-        label = "🚫 Spam" if pred == 1 else "✅ Bukan Spam"
+        label = "🚫 Spam" if pred == 1 else "✅ Bukan Spam/Ham"
         st.success(f"Hasil Deteksi: {label}")
         st.write(f"Probabilitas Spam: {proba[1]:.2f}")
